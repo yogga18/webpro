@@ -1,0 +1,14 @@
+.wrapper-form {
+  margin-top: 30vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-form .card-plain {
+    background-color: #10063d;
+  }
+}
+
+.page-header {
+  position: relative;
+}
+/*# sourceMappingURL=main.css.map */

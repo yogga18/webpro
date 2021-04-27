@@ -1,0 +1,15 @@
+// .status-wrapper {
+//   border: 3px solid rgb(139, 28, 28);
+// }
+
+.wrapper-form {
+  margin-top: 30vh;
+  .card-plain{
+    @media only screen and (max-width: 768px) {
+      background-color: rgb(16, 6, 61);
+    }
+  }
+}
+.page-header{
+  position: relative;
+}
