@@ -10,6 +10,13 @@
  			document.location.href = 'Login-page.php';
  		</script>";
  	}
+   $akun = findAll("SELECT * FROM user ORDER BY id DESC");
+
+ 	// Relasi antara tabel user dan post
+ 
+ 	
+
+
  ?>
 
 <!DOCTYPE html>
@@ -90,104 +97,66 @@
      </div>
    </nav>
    <!-- End Navbar -->
+<br>
+<br>
+<br>
+<br>
+
+<br>
+   <!-- tabel user -->
+ 
+  <div class="container-fluid">
+    <div class="TabelPeice">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+
+          <table class="table table-striped table-dark table-bordered animated fadeInUp" style="animation-delay: 0.3s">
+            <thead>          <!-- INI FIELD -->
+              <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Avatar</th>
+              </tr>
+            </thead>
+                                                  <!-- PEMANGGILAN DATA DARI DATABASE HARGA -->
+            <tbody> 
+            <?php foreach($akun as $user) : ?>
+        <tr>
+            <td><?php echo $user["id"];?></td>
+            <td><?php echo $user["username"];?></td>
+            
+            <td>
+            <?php if($user["avatar"] != null) : ?>
+              <img src="../avatar/<?= $user["avatar"]; ?>" alt="Rounded image" class="img-fluid rounded shadow"
+ 					width="120">
+ 		      	<?php else : ?>
+              <img src="../assets/img/default.jpg" alt="Rounded image" class="img-fluid rounded shadow"
+ 					width="120">          
+            <?php endif; ?>
+             </td>
+        </tr>
+        <?php endforeach;?>       
+            </tbody>
+          </table>
+        
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-   <!-- Back Ground -->
-   <div class="wrapper">
-     <div class="page-header header-filter">
-       <div class="squares square1"></div>
-       <div class="squares square2"></div>
-       <div class="squares square3"></div>
-       <div class="squares square4"></div>
-       <div class="squares square5"></div>
-       <div class="squares square6"></div>
-       <div class="squares square7"></div>
-       <div class="container">
-         <div class="content-center brand">
-           <h1 class="h1-seo">Page Admin</h1>
-           <h3>A beautiful Design System for Bootstrap 4. It's Free and Open Source.</h3>
-         </div>
-       </div>
-     </div>
-
-     <footer class="footer">
-       <div class="container">
-         <div class="row">
-           <div class="col-md-3">
-             <h1 class="title">BLK•</h1>
-           </div>
-           <div class="col-md-3">
-             <ul class="nav">
-               <li class="nav-item">
-                 <a href="./index.html" class="nav-link">
-                   Home
-                 </a>
-               </li>
-               <li class="nav-item">
-                 <a href="./examples/landing-page.html" class="nav-link">
-                   Landing
-                 </a>
-               </li>
-               <li class="nav-item">
-                 <a href="./examples/register-page.html" class="nav-link">
-                   Register
-                 </a>
-               </li>
-               <li class="nav-item">
-                 <a href="./examples/profile-page.html" class="nav-link">
-                   Profile
-                 </a>
-               </li>
-             </ul>
-           </div>
-           <div class="col-md-3">
-             <ul class="nav">
-               <li class="nav-item">
-                 <a href="https://creative-tim.com/contact-us" class="nav-link">
-                   Contact Us
-                 </a>
-               </li>
-               <li class="nav-item">
-                 <a href="https://creative-tim.com/about-us" class="nav-link">
-                   About Us
-                 </a>
-               </li>
-               <li class="nav-item">
-                 <a href="https://creative-tim.com/blog" class="nav-link">
-                   Blog
-                 </a>
-               </li>
-               <li class="nav-item">
-                 <a href="https://opensource.org/licenses/MIT" class="nav-link">
-                   License
-                 </a>
-               </li>
-             </ul>
-           </div>
-           <div class="col-md-3">
-             <h3 class="title">Follow us:</h3>
-             <div class="btn-wrapper profile">
-               <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-                 <i class="fab fa-twitter"></i>
-               </a>
-               <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
-                 <i class="fab fa-facebook-square"></i>
-               </a>
-               <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-                 <i class="fab fa-dribbble"></i>
-               </a>
-             </div>
-           </div>
-         </div>
-       </div>
-     </footer>
-   </div>
-   <!-- Back Ground End-->
-   
-   
+ 
 
 
 
+
+   <!-- End Tabel User -->
+
+   <!-- tes -->
+  
+
+   <!-- end test -->
+ 
 
 
 
